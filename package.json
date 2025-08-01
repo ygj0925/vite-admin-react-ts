@@ -1,10 +1,17 @@
 {
   "name": "vite-admin-react-ts",
+  "description": "antd admin react typescript vite",
+  
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "yuanguangji",
+    "email": "1351523393@qq.com",
+    "url": "https://github.com/yuan-guangji"
+  },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -32,5 +39,9 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=20.0.0 <22.1.0",
+    "npm": ">=10.0.0"
   }
 }
