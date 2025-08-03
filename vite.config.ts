@@ -9,5 +9,19 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
- 
+  resolve: {
+    alias: {
+      '@': '/src', // 根路径
+      '~': '/' // src 路径
+    
+    }
+  },
+  css: {
+   
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      }
+    }
+  }
 })

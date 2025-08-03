@@ -1,14 +1,19 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg?url'
 import viteLogo from '/vite.svg?url'
-import './assets/css/base/tailwind.css'
+import { useTranslation } from 'react-i18next';
+import '@/assets/css/base/tailwind.css'
 import './App.css'
 
 function App() {
+  const { t } = useTranslation();
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <div className="hello">
+        <h1>{t('home.title')}</h1>
+      </div>
       <div className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
         <div>
           <div className="text-xl font-medium text-black dark:text-white">ChitChat</div>
