@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { message } from 'antd'
 import { stringify } from 'qs'
-import config from '../../config'
+import config from '../../config/config'
 
-const MODE = import.meta.env.MODE // 环境变量
+const MODE = import.meta.env.MODE  as keyof typeof config // 环境变量
 
-const getRequest = (method) => {
-  return (url, data, options = {}) => {
+const getRequest = (method: any) => {
+  return (url: string, data: any, options = {}) => {
     let base = config[MODE] // 获取环境变量相对应的属性值
     return axios({
       baseURL: base.apiBaseUrl, // 请求域名地址
