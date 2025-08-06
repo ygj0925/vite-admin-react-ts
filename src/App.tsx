@@ -6,7 +6,7 @@ import 'antd/dist/reset.css';
 // import { useTranslation } from 'react-i18next';
 import '@/assets/css/base/tailwind.css'
 import './App.css'
-import { Button } from 'antd';
+import { Button, Flex } from 'antd';
 
 
 
@@ -17,7 +17,13 @@ function App() {
   return (
     <>
 
+<Flex gap="small" wrap>
     <Button type="primary">Primary Button</Button>
+    <Button>Default Button</Button>
+    <Button type="dashed">Dashed Button</Button>
+    <Button type="text">Text Button</Button>
+    <Button type="link">Link Button</Button>
+  </Flex>
 
       <div className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
         <div>
