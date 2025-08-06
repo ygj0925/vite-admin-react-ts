@@ -10,24 +10,34 @@
     "url": "https://github.com/yuan-guangji"
   },
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite --host --port 8888 --open --mode development",
+    "build:beta": "vite build --mode beta",
+    "build:release": "vite build --mode release",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.11",
+    "antd": "^5.26.7",
+    "axios": "^1.11.0",
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "qs": "^6.14.0",
+    "react": "^18.2.0",
+    "react-activation": "^0.13.4",
+    "react-dom": "^18.2.0",
     "react-i18next": "^15.6.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
     "@types/node": "^24.1.0",
+    "@types/qs": "^6.14.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
