@@ -10,6 +10,15 @@ console.log('config:::', config[env]);
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      '/api': {
+        target: config[env].apiBaseUrl,
+        changeOrigin: true,
+        rewrite: (path: string) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   plugins: [
     react(),
     tailwindcss(),
